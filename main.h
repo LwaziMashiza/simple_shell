@@ -124,7 +124,7 @@ int _isdigit(const char *s);
 /* sh_file11.c */
 void rev_string(char *s);
 
-/* check_syntax_error.c */
+/* sh_file14.c */
 int repeated_char(char *input, int i);
 int error_sep_op(char *input, int i, char last);
 int first_char(char *input, int *i);
@@ -175,13 +175,13 @@ void set_env(char *name, char *value, data_shell *datash);
 int _setenv(data_shell *datash);
 int _unsetenv(data_shell *datash);
 
-/* cd.c */
+/* sh_file12.c */
 void cd_dot(data_shell *datash);
 void cd_to(data_shell *datash);
 void cd_previous(data_shell *datash);
 void cd_to_home(data_shell *datash);
 
-/* cd_shell.c */
+/* sh_file13.c */
 int cd_shell(data_shell *datash);
 
 /* get_builtin */
