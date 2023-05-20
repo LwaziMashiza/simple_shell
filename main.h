@@ -121,7 +121,7 @@ int cmp_chars(char str[], const char *delim);
 char *_strtok(char str[], const char *delim);
 int _isdigit(const char *s);
 
-/* aux_str3.c */
+/* sh_file11.c */
 void rev_string(char *s);
 
 /* check_syntax_error.c */
