@@ -152,7 +152,7 @@ char *rep_var(char *input, data_shell *datash);
 void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
 ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 
-/* exec_line */
+/* sh_file18.c */
 int exec_line(data_shell *datash);
 
 /* sh_file15.c */
