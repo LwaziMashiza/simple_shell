@@ -1,6 +1,5 @@
-#ifndef  _MAIN_H_
-#define  _MAIN_H_
-
+#ifndef _MAIN_H_
+#define _MAIN_H_
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -11,14 +10,12 @@
 #include <fcntl.h>
 #include <signal.h>
 #include <limits.h>
-
 #define BUFSIZE 1024
 #define TOK_BUFSIZE 128
 #define TOK_DELIM " \t\r\n\a"
 
 /* Points to an array of pointers to strings called the "environment" */
 extern char **environ;
-
 
 /**
  * struct data - struct that contains all relevant data on runtime
@@ -158,18 +155,18 @@ ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 /* exec_line */
 int exec_line(data_shell *datash);
 
-/* cmd_exec.c */
+/* sh_file15.c */
 int is_cdir(char *path, int *i);
 char *_which(char *cmd, char **_environ);
 int is_executable(data_shell *datash);
 int check_error_cmd(char *dir, data_shell *datash);
 int cmd_exec(data_shell *datash);
 
-/* env1.c */
+/* sh_file16.c */
 char *_getenv(const char *name, char **_environ);
 int _env(data_shell *datash);
 
-/* env2.c */
+/* sh_file17.c */
 char *copy_info(char *name, char *value);
 void set_env(char *name, char *value, data_shell *datash);
 int _setenv(data_shell *datash);
