@@ -181,7 +181,7 @@ void cd_to_home(data_shell *datash);
 /* sh_file13.c */
 int cd_shell(data_shell *datash);
 
-/* get_builtin */
+/* sh_file20.c */
 int (*get_builtin(char *cmd))(data_shell *datash);
 
 /* sh_file19.c */
