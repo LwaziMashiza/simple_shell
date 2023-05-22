@@ -209,7 +209,7 @@ char *error_path_126(data_shell *datash);
 /* sh_file1.c */
 int get_error(data_shell *datash, int eval);
 
-/* get_sigint.c */
+/* sh_file24.c */
 void get_sigint(int sig);
 
 /* sh_file3.c*/
