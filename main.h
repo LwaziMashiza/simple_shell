@@ -224,7 +224,7 @@ void aux_help(void);
 void aux_help_alias(void);
 void aux_help_cd(void);
 
-/* get_help.c */
+/* sh_file22.c */
 int get_help(data_shell *datash);
 
 #endif
