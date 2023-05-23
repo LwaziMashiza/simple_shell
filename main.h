@@ -128,7 +128,7 @@ int first_char(char *input, int *i);
 void print_syntax_error(data_shell *datash, char *input, int i, int bool);
 int check_syntax_error(data_shell *datash, char *input);
 
-/* shell_loop.c */
+/* sh_file27.c */
 char *without_comment(char *in);
 void shell_loop(data_shell *datash);
 
