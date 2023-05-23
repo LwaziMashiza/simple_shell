@@ -135,7 +135,7 @@ void shell_loop(data_shell *datash);
 /* sh_file25.c */
 char *read_line(int *i_eof);
 
-/* split.c */
+/* sh_file28.c */
 char *swap_char(char *input, int bool);
 void add_nodes(sep_list **head_s, line_list **head_l, char *input);
 void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);
