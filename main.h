@@ -132,7 +132,7 @@ int check_syntax_error(data_shell *datash, char *input);
 char *without_comment(char *in);
 void shell_loop(data_shell *datash);
 
-/* read_line.c */
+/* sh_file25.c */
 char *read_line(int *i_eof);
 
 /* split.c */
