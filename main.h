@@ -92,116 +92,112 @@ typedef struct builtin_s
 	int (*f)(data_shell *datash);
 } builtin_t;
 
-/* shell_file1_aux_lists.c */
+/* aux_lists.c */
 sep_list *add_sep_node_end(sep_list **head, char sep);
 void free_sep_list(sep_list **head);
 line_list *add_line_node_end(line_list **head, char *line);
 void free_line_list(line_list **head);
 
-/* shell_file2_aux_lists2.c */
+/* aux_lists2.c */
 r_var *add_rvar_node(r_var **head, int lvar, char *var, int lval);
 void free_rvar_list(r_var **head);
 
-/* shell_file3_aux_str_functions */
+/* aux_str_functions */
 char *_strcat(char *dest, const char *src);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_strchr(char *s, char c);
 int _strspn(char *s, char *accept);
 
-/* shell_file4_aux_mem.c */
+/* aux_mem.c */
 void _memcpy(void *newptr, const void *ptr, unsigned int size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size);
 
-/* shell_file5_aux_str2.c */
+/*aux_str2.c */
 char *_strdup(const char *s);
 int _strlen(const char *s);
 int cmp_chars(char str[], const char *delim);
 char *_strtok(char str[], const char *delim);
 int _isdigit(const char *s);
 
-/* shell_file6_aux_str3.c */
+/* aux_str3.c */
 void rev_string(char *s);
 
-/* shell_file7_check_syntax_error.c */
+/* check_syntax_error.c */
 int repeated_char(char *input, int i);
 int error_sep_op(char *input, int i, char last);
 int first_char(char *input, int *i);
 void print_syntax_error(data_shell *datash, char *input, int i, int bool);
 int check_syntax_error(data_shell *datash, char *input);
 
-/* shell_file8_shell_loop.c */
+/* shell_loop.c */
 char *without_comment(char *in);
 void shell_loop(data_shell *datash);
 
-/* shell_file9_read_line.c */
+/* read_line.c */
 char *read_line(int *i_eof);
 
-/* shell_file10_split.c */
+/*split.c */
 char *swap_char(char *input, int bool);
 void add_nodes(sep_list **head_s, line_list **head_l, char *input);
 void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);
 int split_commands(data_shell *datash, char *input);
 char **split_line(char *input);
 
-/* shell_file11_rep_var.c */
+/* rep_var.c */
 void check_env(r_var **h, char *in, data_shell *data);
 int check_vars(r_var **h, char *in, char *st, data_shell *data);
 char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
 char *rep_var(char *input, data_shell *datash);
 
-/* shell_file12_get_line.c */
-void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
-ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
-
-/* shell_file13_exec_line */
+/*exec_line */
 int exec_line(data_shell *datash);
 
-/* shell_file14_cmd_exec.c */
+/* cmd_exec.c */
 int is_cdir(char *path, int *i);
 char *_which(char *cmd, char **_environ);
 int is_executable(data_shell *datash);
 int check_error_cmd(char *dir, data_shell *datash);
 int cmd_exec(data_shell *datash);
 
-/* shell_file15_env1.c */
+/* env1.c */
 char *_getenv(const char *name, char **_environ);
 int _env(data_shell *datash);
 
-/* shell_file16_env2.c */
+/* env2.c */
 char *copy_info(char *name, char *value);
 void set_env(char *name, char *value, data_shell *datash);
 int _setenv(data_shell *datash);
 int _unsetenv(data_shell *datash);
 
-/* shell_file17_cd.c */
+/* cd.c */
 void cd_dot(data_shell *datash);
 void cd_to(data_shell *datash);
 void cd_previous(data_shell *datash);
 void cd_to_home(data_shell *datash);
 
-/* shell_file18_cd_shell.c */
+/* cd_shell.c */
 int cd_shell(data_shell *datash);
 
-/* shell_file19_get_builtin */
+/* get_builtin */
 int (*get_builtin(char *cmd))(data_shell *datash);
 
-/* shell_file20_exit.c */
+/* exit.c */
 int exit_shell(data_shell *datash);
 
-/* shell_file21_aux_stdlib.c */
+/* aux_stdlib.c */
 int get_len(int n);
 char *aux_itoa(int n);
 int _atoi(char *s);
 
-/* shell_file22_aux_error1.c */
+/*aux_error1.c */
 char *strcat_cd(data_shell *, char *, char *, char *);
 char *error_get_cd(data_shell *datash);
 char *error_not_found(data_shell *datash);
 char *error_exit_shell(data_shell *datash);
 
-/* shell_file23_aux_error2.c */
+/* aux_error2.c */
 char *error_get_alias(char **args);
 char *error_env(data_shell *datash);
 char *error_syntax(char **args);
@@ -209,25 +205,25 @@ char *error_permission(char **args);
 char *error_path_126(data_shell *datash);
 
 
-/* shell_file24_get_error.c */
+/* get_error.c */
 int get_error(data_shell *datash, int eval);
 
-/* shell_file25_get_sigint.c */
+/* get_sigint.c */
 void get_sigint(int sig);
 
-/* shell_file26_aux_help.c */
+/* aux_help.c */
 void aux_help_env(void);
 void aux_help_setenv(void);
 void aux_help_unsetenv(void);
 void aux_help_general(void);
 void aux_help_exit(void);
 
-/* shell_file27_aux_help2.c */
+/*aux_help2.c */
 void aux_help(void);
 void aux_help_alias(void);
 void aux_help_cd(void);
 
-/* shell_file28_get_help.c */
+/* get_help.c */
 int get_help(data_shell *datash);
 
 #endif
